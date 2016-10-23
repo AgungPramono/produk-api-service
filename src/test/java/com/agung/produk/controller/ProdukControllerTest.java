@@ -117,7 +117,7 @@ public class ProdukControllerTest {
     public void testUpdate() {
         Produk p4 = new Produk();
         p4.setCode("PX-009");
-        p4.setName("Product 909");
+        p4.setName("Product909");
         p4.setPrice(BigDecimal.valueOf(2000));
 
         RestAssured.given().
@@ -129,26 +129,26 @@ public class ProdukControllerTest {
                 .then()
                 .statusCode(200);
 
-//        RestAssured.given().
-//                get(BASE_URL + "/test123")
-//                .then()
-//                .statusCode(200)
-//                .body("id", CoreMatchers.equalTo("test123"))
-//                .body("code", CoreMatchers.equalTo("PX-009"))
-//                .body("name", CoreMatchers.equalTo("Product 909"));
+        RestAssured.given().
+                get(BASE_URL + "/test123")
+                .then()
+                .statusCode(200)
+                .body("id", CoreMatchers.equalTo("test123"))
+                .body("code", CoreMatchers.equalTo("PX-009"))
+                .body("name", CoreMatchers.equalTo("Product909"));
     }
 //
-//    @Test
-//    public void testDelete() {
-//        RestAssured.given().
-//                delete(BASE_URL + "/abc123")
-//                .then()
-//                .statusCode(200);
-//        
-//        RestAssured.given().
-//                get(BASE_URL + "/abc123")
-//                .then()
-//                .statusCode(404);
-//
-//    }
+    @Test
+    public void testDelete() {
+        RestAssured.given().
+                delete(BASE_URL + "/test123")
+                .then()
+                .statusCode(200);
+        
+        RestAssured.given().
+                get(BASE_URL + "/test123")
+                .then()
+                .statusCode(500);
+
+    }
 }
