@@ -6,7 +6,7 @@ jdk:
     - oraclejdk8
     
 services:
-    -mysql
+    - mysql
     
 before_install: 
     - mysql -uroot -e "grant all on belajar.* to belajar@localhost identified by 'java'"
