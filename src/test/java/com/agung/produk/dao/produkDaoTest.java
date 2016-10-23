@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ProdukApiApplication.class)
 @Transactional
-@Sql(scripts = {"/mysql/delete-data.sql","/mysql/sample-produk.sql"})
+@Sql(scripts = {"/mysql/delete-data.sql","/mysql/sample-product.sql"})
 public class produkDaoTest {
 
     @Autowired
@@ -43,5 +43,19 @@ public class produkDaoTest {
         Assert.assertNull(p.getId());
         pd.save(p);
         Assert.assertNotNull(p.getId());
+    }
+    
+    @Test
+    public void testFindById(){
+        Produk p = pd.findOne("test123");
+        
+        Assert.assertNotNull(p);
+        Assert.assertEquals("test123", p.getId());
+        Assert.assertEquals("P-001", p.getCode());
+        Assert.assertEquals("produk-01", p.getName());
+        Assert.assertEquals(BigDecimal.valueOf(321000.01), p.getPrice());
+        
+        Assert.assertNull(pd.findOne("xxx"));
+        
     }
 }

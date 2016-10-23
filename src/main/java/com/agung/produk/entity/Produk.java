@@ -24,7 +24,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  */
 @Entity
-@Table(name = "m_produk")
+@Table(name = "m_product")
 public class Produk {
 
     @Id
@@ -36,7 +36,7 @@ public class Produk {
     @Column(nullable = false, unique = true)
     private String code;
     
-    @NotNull @NotEmpty @Size(min = 3, max = 10)
+    @NotNull @NotEmpty @Size(min = 3, max = 20)
     @Column(nullable = false)
     private String name;
     

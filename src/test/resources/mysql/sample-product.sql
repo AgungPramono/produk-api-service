@@ -1,2 +1,2 @@
 insert into m_product (id, code, name, price) 
-values ('abc123', 'P-001', 'Product 001', 321000.01);
+values ('test123', 'P-001', 'produk-01', 321000.01);
