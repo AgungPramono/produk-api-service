@@ -1,1 +1,1 @@
-delete from product;
+delete from m_product;
