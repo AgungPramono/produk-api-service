@@ -40,7 +40,7 @@ public class ProdukController {
     private ProdukDao pd;
     
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = false)
     public ResponseEntity<Void> createProduk(@RequestBody @Valid Produk p,UriComponentsBuilder uriBuilder){
         pd.save(p);
         
