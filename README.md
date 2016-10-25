@@ -5,7 +5,14 @@
 (https://coveralls.io/github/agungpramono/produk-api-service?branch=master)
 
 ## Teknologi yang digunakan
+ * Maven
  * SpringBoot
  * SpringData JPA
+ * Spring Test
+ * Spring MVC
+ * Coveralds
+ * Hibernate
  * AngularJS
  * Bootstrap
+ * MySQL
+ * Travis CI
