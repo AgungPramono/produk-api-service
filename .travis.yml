@@ -9,9 +9,9 @@ services:
     - mysql
 
 before_install: 
-    - mysql -uroot -e "grant all on belajar.* to belajar@localhost identified by 'java'"
-    - mysql -uroot -e "drop database if exists belajar"
-    - mysql -uroot -e "create database belajar"    
+    - mysql -uroot -e "grant all on latihan.* to latihanuser@localhost identified by 'latihanpasswd'"
+    - mysql -uroot -e "drop database if exists latihan"
+    - mysql -uroot -e "create database latihan"    
 
 after_success:
     - mvn jacoco:report coveralls:report
