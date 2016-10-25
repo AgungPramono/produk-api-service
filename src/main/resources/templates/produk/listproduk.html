@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+ Produk.java
+ produk-api-service 
+
+ Created by Agung Pramono on 25/10/2016 
+ Copyright (c) 2016 Java Development. All rights reserved.
+-->
+<html>
+    <head>
+        <title>Data Produk</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-app="aplikasiProduk">
+        <div class="container">
+            <h1>Data Produk</h1>
+            <div ng-controller="ProdukController">
+                <table border="1" class="table table-bordered table-hover">
+                    <thead>
+                        <tr style="font-weight:bold;border-top:2px solid #ccc;border-bottom:3px solid #ccc" class="well" align="center">
+                            <th>ID</th>
+                            <th>CODE</th>
+                            <th>NAME</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="p in dataProduk.content">
+                            <td>{{p.id}}</td>
+                            <td>{{p.code}}</td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/js/aplikasi.js"></script>
+    </body>
+</html>
