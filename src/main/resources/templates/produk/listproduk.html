@@ -25,6 +25,7 @@
                             <th>CODE</th>
                             <th>NAME</th>
                             <th>PRICE</th>
+                            <th>AKSI</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +34,8 @@
                             <td>{{p.code}}</td>
                             <td>{{p.name}}</td>
                             <td>{{p.price}}</td>
+                            <td><button class="btn btn-primary" ng-click="editProduk(p)" >Edit</button>
+                            <button class="btn btn-danger" ng-click="hapusProduk(p)" >Hapus</button></td>
                         </tr>
                     </tbody>
                 </table>
